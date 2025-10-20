@@ -80,81 +80,78 @@ export default function About() {
               Hi, I am <span>Sathish Shanmugam </span>
             </p>
             <h2 className="about__heading">
-              A Geek who thinks Coding is a Superpower
+              A passionate developer who believes coding is the superpower that drives innovation and change.
             </h2>
             <div className="about__info">
               <PText>
-                I am from Mount Abu, a hill station in the Aravalli range of
-                Rajasthan, and am currently based in Mumbai, working as a
-                Software Development Engineer at Juspay for the past two years.
+                I’m Sathish Shanmugam, a Senior iOS Developer based in Chennai, 
+                Tamil Nadu, with 9 years of experience in designing and building innovative mobile applications. 
+                I currently work at ClearVue Solutions, Chennai, where I focus on crafting seamless,
+                 high-performance iOS experiences.
                 <br />
-                <br />I developed interest in coding because I was pretty
-                average in other subjects during my schooling. Back then, to
-                start coding was my only option and now - not getting to explore
-                this field is my greatest fear. I love learning & working with
-                new technologies, and possess interest in Competetive
-                Programming as well as contributing to Open Source.
+                <br />My journey into coding began with curiosity and a desire to create. 
+                Over the years, that curiosity has evolved into a deep passion for building impactful 
+                solutions and continuously exploring new technologies. I enjoy solving complex problems, 
+                learning from challenges, and contributing to meaningful projects—whether through app development,
+                 competitive programming, or open-source contributions.
               </PText>
             </div>
             <DownloadCV />
           </div>
           <div className="right">
-            <img loading="lazy" src={Img} alt="My Img" />
+            <img loading="lazy" src={Img} alt="src/assets/images/sathishphoto.jpeg" />
           </div>
         </div>
 
         <div className="about__info__items">
           <AboutItems
-            heading="My Skills"
+            heading="My Core Skills"
             entries={[
               {
-                title: "FrontEnd",
+                title: "Languages & Frameworks:",
                 items: [
-                  "HTML",
-                  "CSS",
-                  "SCSS",
-                  "React JS",
-                  "Rescript",
-                  "Tailwind",
+                  "Swift",
+                  "SwiftUI",
+                  "Objective-C",
+                  "UIKit",
+                   "Combine"
                 ],
               },
               {
-                title: "Databases",
-                items: ["MySQL", "MongoDB"],
+                title: "Tools & Platforms:",
+                items: ["Xcode",
+               "Git/GitLab",
+               "Jira",
+               "Trello",
+               "Azure DevOps"],
               },
               {
-                title: "BackEnd",
-                items: ["Django", "Node"],
+                title: "Libraries & Services:",
+                items: ["Firebase",
+                       "WebRTC",
+                       "RealmSwift",
+                       "XMPP",
+                       "CocoaPods",
+                       "Socket.io",
+                       "MessageKit."],
               },
               {
-                title: "App Development",
-                items: ["Flutter", "Dart", "Firebase", "Android Native"],
-              },
-              {
-                title: "Languages",
-                items: ["Python", "C++", "JavaScript", "Haskell", "Java"],
+                title: "Testing & Best Practices:",
+                items: ["XCTest", "XCUITest", "Agile/Scrum", "Code Reviews", "CI/CD pipelines", "Software Design & Architecture"],
               },
             ]}
           />
           <AboutItems
             heading="Education"
             entries={[
-              {
-                title: "B.Tech - CSE",
+               {
+                title: "MCA",
                 items: [
-                  "D.Y. Patil International University, Akurdi, Pune",
-                  "UGC",
-                  "CGPA: 8.9",
+                  "PR ENGINEERING COLLEGE - ANNA UNIVERSITY",
+                  "PG",
+                  "CGPA: 7.6",
                 ],
-              },
-              {
-                title: "HSC",
-                items: [
-                  "S.T. John's Senior Secondary School, Aburoad, Rajasthan",
-                  "CBSE",
-                  "CGPA: 7.2",
-                ],
-              },
+              }
             ]}
           />
         </div>

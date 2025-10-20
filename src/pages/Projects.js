@@ -1,116 +1,293 @@
-import React, { Component } from "react";
+
+import React, { useState } from "react";
 import styled from "styled-components";
 import SectionTitle from "../components/SectionTitle";
-import ProjectCard from "../components/ProjectCard";
 import projectList from "../assets/data/projects";
+import { useNavigate } from "react-router-dom";
+
 
 const ProjectStyles = styled.div`
   padding-top: 10rem;
   min-height: 100vh;
-  .error {
-    padding: 10rem;
+
+  .carousel {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
+
+  .carousel__viewport {
+    position: relative;
+    perspective: 1200px;
+    padding: 20px 0 48px;
+    outline: none;
+  }
+
+  .carousel__track {
+    position: relative;
+    height: 400px;
+    transform-style: preserve-3d;
+    display: grid;
+    place-items: center;
+  }
+
+  .card {
+    position: absolute;
+    width: 300px;
+    height: 360px;
+    border-radius: 16px;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4), 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+      opacity 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+    cursor: pointer;
+  }
+
+  .card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+
+  .card__body {
+    padding: 12px;
+    color: #e5e7eb;
+  }
+
+  .card--dim {
+    filter: saturate(0.8) brightness(0.9);
+    opacity: 0.9;
+  }
+
+  .card--far {
+    filter: saturate(0.6) brightness(0.75);
+    opacity: 0.75;
+  }
+
+  .card--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    pointer-events: none;
+  }
+
+  .btn {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(17, 24, 39, 0.7);
+    color: #e5e7eb;
+    cursor: pointer;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+
+  .btn:hover {
+    background: rgba(17, 24, 39, 0.9);
+    transform: translateZ(0) scale(1.04);
+  }
+
+  .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease;
+  }
+
+  .dot[aria-current="true"] {
+    background: #22d3ee;
+    transform: scale(1.25);
+  }
+
+  .content {
+    display: grid;
+    gap: 6px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #111827;
+    border-radius: 18px;
+    width: 500px;
+    margin: 0 auto;
+    color: #e5e7eb;
     text-align: center;
   }
-  .filters {
-    justify-content: center;
-    margin-top: 3rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    .btn {
-      background-color: var(--deep-dark);
-      padding: 1rem 2rem;
-      transition: 1s ease;
-      cursor: pointer;
-      p {
-        text-transform: uppercase;
-        font-size: 1.3rem;
-      }
-      &:hover {
-        background-color: var(--gray-1);
-        p {
-          color: var(--deep-dark);
-          font-weight: bold;
-        }
-      }
-    }
+
+  .content.is-fading-out {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 220ms ease, transform 220ms ease;
   }
-  .card-container {
-    margin: 3rem 0rem 3rem 0rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
+  .content.is-fading-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+    .card__body button {
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: #22d3ee;
+    color: #111827;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  .card__body button:hover {
+    transform: scale(1.05);
+  }
+
 `;
 
-export class Projects extends Component {
-  constructor(props) {
-    super(props);
+const Projects = () => {
+  const [projects] = useState(projectList);
+  const [current, setCurrent] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
 
-    this.state = {
-      projList: projectList,
-    };
-  }
-
-  BtnClick = (name) => {
-    if (name === "All") {
-      this.setState({ projList: projectList });
-    } else {
-      let tempList = [];
-      for (let i = 0; i < projectList.length; i++) {
-        for (let j = 0; j < projectList[i].tech.length; j++) {
-          if (name.toLowerCase() === projectList[i].tech[j]) {
-            tempList.push(projectList[i]);
-            break;
-          }
-        }
-      }
-      for (var i = tempList.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = tempList[i];
-        tempList[i] = tempList[j];
-        tempList[j] = temp;
-      }
-      this.setState({ projList: tempList });
-    }
+  const goTo = (idx) => {
+    const n = Math.max(0, Math.min(idx, projects.length - 1));
+    if (n === current || isAnimating) return;
+    setCurrent(n);
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 380);
   };
 
-  filter_names = [
-    "All",
-    "JavaScript",
-    "HTML CSS",
-    "Django",
-    "React",
-    "NodeJs",
-    "AI ML",
-    "Flutter",
-    "Dart",
-    "Python",
-  ];
+  const prev = () => goTo(current - 1);
+  const next = () => goTo(current + 1);
 
-  render() {
-    return (
-      <ProjectStyles>
-        <SectionTitle heading="PROJECTS" subheading="some of my works" />
-          <div className="filters">
-            {this.filter_names.map((name, index) => (
-              <button
-                onClick={() => this.BtnClick(name)}
-                key={index}
-                className="btn rounded-md"
-              >
-                <p>{name}</p>
-              </button>
-            ))}
+  const viewDetails = (project) => {
+    navigate(`/project/${project.id}`, { state: { project } });
+  };
+
+  return (
+    <ProjectStyles>
+      <SectionTitle heading="PROJECTS" subheading="some of my works" />
+      <div className="carousel">
+        <div
+          className="carousel__viewport"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "ArrowLeft") prev();
+            if (e.key === "ArrowRight") next();
+          }}
+        >
+          <div className="carousel__track">
+            {projects.map((project, i) => {
+              const d = i - current;
+              let x = 0,
+                z = 0,
+                ry = 0,
+                s = 1,
+                classes = "";
+              if (d === 0) {
+                x = 0;
+                z = 80;
+              } else if (Math.abs(d) === 1) {
+                x = d < 0 ? -220 : 220;
+                z = 0;
+                ry = d < 0 ? 18 : -18;
+                s = 0.92;
+                classes = "card--dim";
+              } else if (Math.abs(d) === 2) {
+                x = d < 0 ? -360 : 360;
+                z = -200;
+                ry = d < 0 ? 32 : -32;
+                s = 0.84;
+                classes = "card--far";
+              } else {
+                x = d < 0 ? -520 : 520;
+                z = -420;
+                ry = d < 0 ? 32 : -32;
+                s = 0.76;
+                classes = "card--hidden";
+              }
+
+              return (
+                <div
+                  key={i}
+                  className={`card ${classes}`}
+                  style={{
+                    transform: `translateX(${x}px) translateZ(${z}px) rotateY(${ry}deg) scale(${s})`,
+                    zIndex: 1000 - Math.abs(d),
+                  }}
+                  onClick={() => goTo(i)}
+                >
+                  <img src={project.img} alt={project.name} />
+                  <div className="card__body">
+                    <h3>{project.name}</h3>
+                    <p>{project.tech.join(", ")}</p>
+                    {d === 0 && (
+                      <button onClick={() => viewDetails(project)}>
+                        View Details
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="card-container">
-            {this.state.projList.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
+
+          <div className="controls">
+            <button className="btn" onClick={prev}>
+              &#10094;
+            </button>
+            <button className="btn" onClick={next}>
+              &#10095;
+            </button>
           </div>
-      </ProjectStyles>
-    );
-  }
-}
+        </div>
+
+        <div className="dots">
+          {projects.map((_, i) => (
+            <button
+              key={i}
+              className="dot"
+              aria-current={i === current ? "true" : "false"}
+              onClick={() => goTo(i)}
+            ></button>
+          ))}
+        </div>
+
+        <div className="content">
+          <h3>{projects[current].name}</h3>
+          <p>{projects[current].tech.join(", ")}</p>
+          <p>{projects[current].desc}</p>
+        </div>
+      </div>
+    </ProjectStyles>
+  );
+};
 
 export default Projects;
+
+

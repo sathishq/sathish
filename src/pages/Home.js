@@ -8,7 +8,7 @@ import { MdDeveloperMode, MdCode } from "react-icons/md";
 import { BsArrowDown } from "react-icons/bs";
 import DownloadCV from "../components/DownloadCV";
 import { FaGlobeAmericas } from "react-icons/fa";
-import TestimonialsSection from "../components/TestimonialsSection";
+// import TestimonialsSection from "../components/TestimonialsSection";
 import Typewriter from "../components/Typewriter";
 import { useEffect, useState } from "react";
 
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="hero__info animate-fade-in">
               <PText>
                 {
-                  "I am a passionate Software Developer with a background in Computer Science, eager to collaborate and create impactful solutions. I thrive on solving complex problems and bringing innovative concepts to life. With every line of code, I aim to push boundaries, learn, and explore new possibilities."
+                  "I’m a Senior iOS Developer with 9 years of experience creating high-quality, user-focused mobile applications. I’m passionate about transforming ideas into elegant, performant, and scalable solutions. I thrive on tackling complex challenges, exploring emerging technologies, and continuously refining my craft to deliver exceptional user experiences."
                 }
               </PText>
               <div className="buttons">
@@ -197,7 +197,9 @@ export default function Home() {
         </div>
       </div>
 
-      <TestimonialsSection />
+      {/* this may added in future */}
+
+      {/* <TestimonialsSection /> */}
       
       <div className="contact__banner">
         <div className="container">

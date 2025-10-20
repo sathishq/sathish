@@ -120,7 +120,7 @@ export default function Contact() {
         alert(
           "Some problem occurred while sending the message:: " +
             er +
-            "\nPlease try again or send an email on skshamagarwal@gmail.com"
+            "\nPlease try again or send an email on sa.sathish@hotmail.com"
         );
       });
     setName("");
@@ -135,23 +135,25 @@ export default function Contact() {
           <div className="contact__wrapper">
             <div className="left">
               <a
-                href="mailto:skshamagarwal@gmail.com"
+                href="mailto:sa.sathish@hotmail.com
+"
                 target="_blank"
                 rel="noreferrar noreferrer"
               >
                 <ContactInfoItem
                   icon={<MdEmail />}
-                  text="skshamagarwal@gmail.com"
+                  text="sa.sathish@hotmail.com
+"
                 />
               </a>
               <a
-                href="https://www.linkedin.com/in/skshamagarwal/"
+                href="https://www.linkedin.com/in/sathish-s-b498a058/"
                 target="_blank"
                 rel="noreferrar noreferrer"
               >
                 <ContactInfoItem icon={<FaLinkedin />} text="Linked In" />
               </a>
-              <ContactInfoItem text="Santacruz, Mumbai - India" />
+              <ContactInfoItem text="Chennai-Tamilnadu" />
             </div>
             <div className="right">
               <FormSectionStyle onSubmit={sendEmail}>

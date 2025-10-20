@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectionTitle from "../components/SectionTitle";
 import ExpList from "../assets/data/experience";
-import VolList from "../assets/data/volunteer";
+// import VolList from "../assets/data/volunteer";
 
 const ExpStyles = styled.div`
   padding-top: 10rem;
@@ -141,7 +141,7 @@ export default function Experience() {
       <div className="section__title">
         <SectionTitle
           heading="EXPERIENCE"
-          subheading="places I have worked at"
+          subheading="Places I have worked at"
         />
       </div>
       <div className="container">
@@ -162,7 +162,7 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="section__title">
+        {/* <div className="section__title">
           <SectionTitle
             heading="VOLUNTEER ROLES"
             subheading="positions I have volunteered"
@@ -183,7 +183,7 @@ export default function Experience() {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </ExpStyles>
   );

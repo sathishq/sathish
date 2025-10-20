@@ -10,6 +10,7 @@ const FooterStyles = styled.div`
     display: flex;
     gap: 2rem;
     .footer__col1 {
+    display: none;
       flex: 2;
       padding-right: 10rem;
       .footer__c1__title {

@@ -6,7 +6,6 @@ import EmailBotImg from '../images/email_bot.png'
 import MedCareImg from '../images/medcare.JPG'
 import JobScraperImg from '../images/job_scraper.JPG'
 import PortfolioImg from '../images/portfolio.JPG'
-import ResultGenImg from '../images/result_generator.png'
 import RFDTImg from '../images/rfdt.png'
 import TodoImg from '../images/todo_app.JPG'
 
@@ -15,7 +14,7 @@ const projectList = [
     id: uuidv4(),
     name: 'PredixDB',
     desc:
-      'Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual.',
+      'Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual.',
     img: PredixImg,
     tech: ['django', 'html css', 'javascript', 'ai ml', 'python'],
     liveLink: 'https://predixdb.herokuapp.com/',
@@ -100,17 +99,7 @@ const projectList = [
     tech: ['react', 'nodejs'],
     liveLink: '',
     githubLink: 'https://github.com/skshamagarwal/Todo-App'
-  },
-  {
-    id: uuidv4(),
-    name: 'Result Generator',
-    desc:
-      'Python Script that automates the process of generating result / report cards for each student from the details stored in csv / .xlsx.',
-    img: ResultGenImg,
-    tech: ['python'],
-    liveLink: '',
-    githubLink: 'https://github.com/skshamagarwal/result-generator'
-  },
+  }
 ];
 
 export default projectList;

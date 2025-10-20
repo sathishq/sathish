@@ -43,7 +43,7 @@ export default function Social() {
     return (
         <SocialStyles>
             <ul>
-                <li><Link to="https://www.linkedin.com/in/skshamagarwal/"> <FaLinkedin /> </Link></li>
+                <li><Link to="https://www.linkedin.com/in/sathish-s-b498a058/"> <FaLinkedin /> </Link></li>
                 <li><Link to="https://github.com/skshamagarwal"> <FaGithubAlt /> </Link></li>
                 <li><Link to="skshamagarwal@gmail.com"> <SiGmail /> </Link></li>
                 <li><Link to="https://www.linkedin.com/in/skshamagarwal/"> <FaTwitter /> </Link></li>
