@@ -181,12 +181,12 @@ export default function Home() {
             <ServicesSectionItem
               icon={<FaGlobeAmericas />}
               title="Web Development"
-              desc="I build responsive, high-performance websites using Node, React, Django, and HTML & Tailwind, tailored to your requirements."
+              desc="I build responsive, high-performance websites using Node, React, and HTML,LESS & Tailwind, tailored to your requirements."
             />
             <ServicesSectionItem
               icon={<MdDeveloperMode />}
               title="Mobile App Dev"
-              desc="I create custom mobile apps, from native Android to cross-platform solutions with React Native, Flutter, and Spring."
+              desc="I design and develop custom mobile applications tailored to your needs, delivering high-quality native apps for both iOS and Android platforms."
             />
             <ServicesSectionItem
               icon={<MdCode />}

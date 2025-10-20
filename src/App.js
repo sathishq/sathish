@@ -11,7 +11,7 @@ import Experience from "./pages/Experience";
 
 export default function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

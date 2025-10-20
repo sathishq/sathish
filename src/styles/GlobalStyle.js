@@ -7,15 +7,16 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
-  :root{
+ :root{
     --dark-bg: #101828;
     --gray-1: #BCB4B4;
-    --deep-dark: #1E1E1E;
+    --deep-dark: #153241;
     --gray-2: #363636;
     --yellow: #FFEB3B;
     --white : white;
     --black: black;
   }
+
   html{
     font-size: 10px;
     font-family: 'Roboto Mono';
