@@ -77,14 +77,14 @@ export default function About() {
         <div className="top-section">
           <div className="left">
             <p className="about__subheading">
-              Hi, I am <span>Sathish Shanmugam </span>
+              Hi, I am <span>Sathish </span>
             </p>
             <h2 className="about__heading">
               A passionate developer who believes coding is the superpower that drives innovation and change.
             </h2>
             <div className="about__info">
               <PText>
-                I’m Sathish Shanmugam, a Senior iOS Developer based in Chennai, 
+                I’m Sathish, a Senior iOS Developer based in Chennai, 
                 Tamil Nadu, with 9 years of experience in designing and building innovative mobile applications. 
                 I currently work at ClearVue Solutions, Chennai, where I focus on crafting seamless,
                  high-performance iOS experiences.

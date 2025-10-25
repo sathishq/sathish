@@ -56,7 +56,7 @@ export default function Footer() {
     <FooterStyles>
       <div className="container">
         <div className="footer__col1">
-          <h1 className="footer__c1__title">Sathish Shanmugam</h1>
+          <h1 className="footer__c1__title">Sathish</h1>
           <PText>
             {
               "I am a passionate Software Developer, eager to collaborate and create impactful solutions. I thrive on solving complex problems and bringing innovative concepts to life."
@@ -140,7 +140,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <p> © 2026 - Portfolio | Sathish Shanmugam</p>
+          <p> © 2026 - Portfolio | Sathish</p>
         </div>
       </div>
     </FooterStyles>

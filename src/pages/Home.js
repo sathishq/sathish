@@ -147,7 +147,7 @@ export default function Home() {
             </span>
             {showDiv && (
               <span className="hero__name animate-fade-in">
-                Sathish Shanmugam
+                SATHISH
               </span>
             )}
           </h1>
