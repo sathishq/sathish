@@ -2,7 +2,7 @@ import React from "react";
 import PText from "../components/PText";
 import styled from "styled-components";
 import AboutItems from "../components/AboutItems";
-import Img from "../assets/images/img.jpeg";
+import Img from "../assets/images/sathish.jpg";
 import DownloadCV from "../components/DownloadCV";
 
 const AboutStyles = styled.div`
@@ -99,7 +99,7 @@ export default function About() {
             <DownloadCV />
           </div>
           <div className="right">
-            <img loading="lazy" src={Img} alt="src/assets/images/sathishphoto.jpeg" />
+            <img loading="lazy" src={Img} alt="src/assets/images/sathish.jpg" />
           </div>
         </div>
 

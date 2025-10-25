@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { MdMenu, MdClose } from "react-icons/md";
-
+import Logo from "../assets/images/logo.png";
 const NavBarStyles = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
@@ -37,6 +37,7 @@ const NavBarStyles = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--dark-bg);
 
     .logo {
       p {
@@ -133,8 +134,12 @@ export default function NavBar() {
       <div className={!showNav ? 'wrapper hide-item' : 'wrapper'}>
         <div className="logo">
           <NavLink to="/">
-            <p>SATHISH</p>
-            <p>SHANMUGAM</p>
+            <img
+              src={Logo}
+              alt="Sathish Logo"
+              className="mx-auto w-24 h-auto"
+            />
+            {/* <p className="font-semibold">SATHISH SHANMUGAM</p> */}
           </NavLink>
         </div>
         <div className="menu">

@@ -103,13 +103,13 @@ export default function Contact() {
 
   function sendEmail(e) {
     e.preventDefault();
-
+// done it by using emailjs.com
     emailjs
       .sendForm(
-        "service_6rjxzum",
-        "template_zwpxzec",
+        "service_tk1avsj",
+        "template_rl6czui",
         e.target,
-        "user_4XxLhG5Qjqm436rvmL6fY"
+        "EB-HMmvRGVaXRzGwt"
       )
       .then((res) => {
         alert(
