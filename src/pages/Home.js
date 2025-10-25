@@ -155,7 +155,7 @@ export default function Home() {
             <div className="hero__info animate-fade-in">
               <PText>
                 {
-                  "I’m a Senior iOS Developer with 9 years of experience creating high-quality, user-focused mobile applications. I’m passionate about transforming ideas into elegant, performant, and scalable solutions. I thrive on tackling complex challenges, exploring emerging technologies, and continuously refining my craft to deliver exceptional user experiences."
+                  "I craft digital experiences that blend design, performance, and purpose. With years of experience in web and mobile development, I turn ideas into products that feel intuitive, look beautiful, and work flawlessly. I’m driven by curiosity, creativity, and the pursuit of clean, scalable code that makes a real impact."
                 }
               </PText>
               <div className="buttons">
@@ -179,15 +179,16 @@ export default function Home() {
           ></SectionTitle>
           <div className="services__items">
             <ServicesSectionItem
-              icon={<FaGlobeAmericas />}
-              title="Web Development"
-              desc="I build responsive, high-performance websites using Node, React, and HTML,LESS & Tailwind, tailored to your requirements."
-            />
-            <ServicesSectionItem
               icon={<MdDeveloperMode />}
               title="Mobile App Dev"
               desc="I design and develop custom mobile applications tailored to your needs, delivering high-quality native apps for both iOS and Android platforms."
             />
+            <ServicesSectionItem
+              icon={<FaGlobeAmericas />}
+              title="Web Development"
+              desc="I build responsive, high-performance websites using Node, React, and HTML,LESS & Tailwind, tailored to your requirements."
+            />
+            
             <ServicesSectionItem
               icon={<MdCode />}
               title="Code Support"

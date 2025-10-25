@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import FooterColumns from "./FooterColumns";
-import PText from "./PText";
+// import FooterColumns from "./FooterColumns";
+// import PText from "./PText";
 
 const FooterStyles = styled.div`
   padding-top: 5rem;
-  background-color: var(--deep-dark);
+  background-color: var(--deep-bg);
   .container {
     display: flex;
     gap: 2rem;
@@ -28,7 +28,7 @@ const FooterStyles = styled.div`
     }
   }
   .copyright {
-    background-color: var(--dark-bg);
+    background-color: var(--deep-dark);
     margin-top: 3rem;
     padding: 0.6rem 0;
     text-align: center;
@@ -54,7 +54,7 @@ const FooterStyles = styled.div`
 export default function Footer() {
   return (
     <FooterStyles>
-      <div className="container">
+      {/* <div className="container">
         <div className="footer__col1">
           <h1 className="footer__c1__title">Sathish</h1>
           <PText>
@@ -137,7 +137,7 @@ export default function Footer() {
             ]}
           />
         </div>
-      </div>
+      </div> */}
       <div className="copyright">
         <div className="container">
           <p> © 2026 - Portfolio | Sathish</p>

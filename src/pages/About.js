@@ -76,82 +76,64 @@ export default function About() {
       <div className="container">
         <div className="top-section">
           <div className="left">
-            <p className="about__subheading">
-              Hi, I am <span>Sathish </span>
+            <p className="about__heading ">
+              Hi, I’m <span>Sathish</span>
             </p>
-            <h2 className="about__heading">
-              A passionate developer who believes coding is the superpower that drives innovation and change.
+            <h2 className="about__subheading">
+              A developer passionate about turning ideas into impactful, high-performance applications.
             </h2>
             <div className="about__info">
               <PText>
-                I’m Sathish, a Senior iOS Developer based in Chennai, 
-                Tamil Nadu, with 9 years of experience in designing and building innovative mobile applications. 
-                I currently work at ClearVue Solutions, Chennai, where I focus on crafting seamless,
-                 high-performance iOS experiences.
+                I’m a Senior Mobile and Web Developer based in Chennai, Tamil Nadu, with over 9 years of experience building high-quality, user-centered digital solutions. Currently, I work at ClearVue Solutions, where I specialize in creating seamless, scalable, and performance-driven applications across platforms.
                 <br />
-                <br />My journey into coding began with curiosity and a desire to create. 
-                Over the years, that curiosity has evolved into a deep passion for building impactful 
-                solutions and continuously exploring new technologies. I enjoy solving complex problems, 
-                learning from challenges, and contributing to meaningful projects—whether through app development,
-                 competitive programming, or open-source contributions.
+                <br />
+                My journey started with curiosity and a desire to bring ideas to life through technology. Over the years, that curiosity has grown into a deep passion for crafting products that combine clean design, efficient architecture, and meaningful user experiences. I enjoy solving complex challenges, exploring emerging technologies, and contributing to projects that make a real impact—whether through mobile apps, web development, or open-source collaboration.
               </PText>
             </div>
             <DownloadCV />
           </div>
           <div className="right">
-            <img loading="lazy" src={Img} alt="src/assets/images/sathish.jpg" />
+            <img
+              loading="lazy"
+              src={Img}
+              alt="Sathish portrait"
+            />
           </div>
         </div>
 
         <div className="about__info__items">
           <AboutItems
-            heading="My Core Skills"
+            heading="Core Skills"
             entries={[
               {
                 title: "Languages & Frameworks:",
-                items: [
-                  "Swift",
-                  "SwiftUI",
-                  "Objective-C",
-                  "UIKit",
-                   "Combine"
-                ],
+                items: ["Swift", "SwiftUI", "Objective-C", "UIKit", "Combine"],
               },
               {
                 title: "Tools & Platforms:",
-                items: ["Xcode",
-               "Git/GitLab",
-               "Jira",
-               "Trello",
-               "Azure DevOps"],
+                items: ["Xcode", "Git/GitLab", "Jira", "Trello", "Azure DevOps"],
               },
               {
                 title: "Libraries & Services:",
-                items: ["Firebase",
-                       "WebRTC",
-                       "RealmSwift",
-                       "XMPP",
-                       "CocoaPods",
-                       "Socket.io",
-                       "MessageKit."],
+                items: ["Firebase", "WebRTC", "RealmSwift", "XMPP", "CocoaPods", "Socket.io", "MessageKit"],
               },
               {
                 title: "Testing & Best Practices:",
-                items: ["XCTest", "XCUITest", "Agile/Scrum", "Code Reviews", "CI/CD pipelines", "Software Design & Architecture"],
+                items: ["XCTest", "XCUITest", "Agile/Scrum", "Code Reviews", "CI/CD Pipelines", "Software Architecture"],
               },
             ]}
           />
           <AboutItems
             heading="Education"
             entries={[
-               {
-                title: "MCA",
+              {
+                title: "Master of Computer Applications (MCA)",
                 items: [
-                  "PR ENGINEERING COLLEGE - ANNA UNIVERSITY",
-                  "PG",
+                  "PR Engineering College – Anna University",
+                  "Postgraduate",
                   "CGPA: 7.6",
                 ],
-              }
+              },
             ]}
           />
         </div>
@@ -159,3 +141,4 @@ export default function About() {
     </AboutStyles>
   );
 }
+
