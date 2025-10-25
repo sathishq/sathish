@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/sathish/static/css/main.722b3898.css",
-    "main.js": "/sathish/static/js/main.d9536c52.js",
-    "static/media/predix.jpg": "/sathish/static/media/predix.3842056f819c7b4a60d0.jpg",
-    "static/media/Montserrat-Bold.ttf": "/sathish/static/media/Montserrat-Bold.079ca05d3ded9bc107ab.ttf",
-    "static/media/Montserrat-SemiBold.ttf": "/sathish/static/media/Montserrat-SemiBold.fa8441f345d83a0bc4ec.ttf",
-    "static/media/img.jpeg": "/sathish/static/media/img.0173b140ad1682a42d74.jpeg",
-    "static/media/medcare.JPG": "/sathish/static/media/medcare.ab9942e2caafdc47833b.JPG",
-    "static/media/image_detection.jpg": "/sathish/static/media/image_detection.fd19b74b85628ed28eed.jpg",
-    "static/media/job_scraper.JPG": "/sathish/static/media/job_scraper.bff17f981aa1e203ea7a.JPG",
-    "static/media/email_bot.png": "/sathish/static/media/email_bot.2644758eed803a1b2444.png",
-    "static/media/cap.JPG": "/sathish/static/media/cap.d168fe046ee2fc08881c.JPG",
-    "static/media/RobotoMono-Regular.ttf": "/sathish/static/media/RobotoMono-Regular.418a8f9f65ccad0918af.ttf",
-    "static/media/portfolio.JPG": "/sathish/static/media/portfolio.a1a381b6249bcec64a2b.JPG",
-    "static/media/todo_app.JPG": "/sathish/static/media/todo_app.13494c9f6231936722f1.JPG",
-    "static/media/LilitaOne-Regular.ttf": "/sathish/static/media/LilitaOne-Regular.797856d9e8eaaa395824.ttf",
-    "static/media/rfdt.png": "/sathish/static/media/rfdt.5db4f79b87374def9298.png",
-    "index.html": "/sathish/index.html",
-    "main.722b3898.css.map": "/sathish/static/css/main.722b3898.css.map",
-    "main.d9536c52.js.map": "/sathish/static/js/main.d9536c52.js.map"
+    "main.css": "/static/css/main.c3f4ea36.css",
+    "main.js": "/static/js/main.54fdfa70.js",
+    "static/media/sathish.jpg": "/static/media/sathish.f2cdabd5d95c93d97ae5.jpg",
+    "static/media/predix.jpg": "/static/media/predix.3842056f819c7b4a60d0.jpg",
+    "static/media/Montserrat-Bold.ttf": "/static/media/Montserrat-Bold.079ca05d3ded9bc107ab.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.fa8441f345d83a0bc4ec.ttf",
+    "static/media/medcare.JPG": "/static/media/medcare.ab9942e2caafdc47833b.JPG",
+    "static/media/image_detection.jpg": "/static/media/image_detection.fd19b74b85628ed28eed.jpg",
+    "static/media/job_scraper.JPG": "/static/media/job_scraper.bff17f981aa1e203ea7a.JPG",
+    "static/media/email_bot.png": "/static/media/email_bot.2644758eed803a1b2444.png",
+    "static/media/cap.JPG": "/static/media/cap.d168fe046ee2fc08881c.JPG",
+    "static/media/RobotoMono-Regular.ttf": "/static/media/RobotoMono-Regular.418a8f9f65ccad0918af.ttf",
+    "static/media/portfolio.JPG": "/static/media/portfolio.a1a381b6249bcec64a2b.JPG",
+    "static/media/todo_app.JPG": "/static/media/todo_app.13494c9f6231936722f1.JPG",
+    "static/media/LilitaOne-Regular.ttf": "/static/media/LilitaOne-Regular.797856d9e8eaaa395824.ttf",
+    "static/media/rfdt.png": "/static/media/rfdt.5db4f79b87374def9298.png",
+    "static/media/logo.png": "/static/media/logo.72b239d24d915432e310.png",
+    "index.html": "/index.html",
+    "main.c3f4ea36.css.map": "/static/css/main.c3f4ea36.css.map",
+    "main.54fdfa70.js.map": "/static/js/main.54fdfa70.js.map"
   },
   "entrypoints": [
-    "static/css/main.722b3898.css",
-    "static/js/main.d9536c52.js"
+    "static/css/main.c3f4ea36.css",
+    "static/js/main.54fdfa70.js"
   ]
 }

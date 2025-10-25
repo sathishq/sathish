@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "homepage": "https://sathishq.github.io/sathish",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
