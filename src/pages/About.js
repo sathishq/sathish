@@ -31,7 +31,7 @@ const AboutStyles = styled.div`
         margin-bottom: 5rem;
         padding-right: 5rem;
         p {
-          max-width: 100%;
+          max-width: 200%;
           font-size: 1.5rem;
         }
       }
@@ -103,26 +103,81 @@ export default function About() {
 
         <div className="about__info__items">
           <AboutItems
-            heading="Core Skills"
-            entries={[
-              {
-                title: "Languages & Frameworks:",
-                items: ["Swift", "SwiftUI", "Objective-C", "UIKit", "Combine"],
-              },
-              {
-                title: "Tools & Platforms:",
-                items: ["Xcode", "Git/GitLab", "Jira", "Trello", "Azure DevOps"],
-              },
-              {
-                title: "Libraries & Services:",
-                items: ["Firebase", "WebRTC", "RealmSwift", "XMPP", "CocoaPods", "Socket.io", "MessageKit"],
-              },
-              {
-                title: "Testing & Best Practices:",
-                items: ["XCTest", "XCUITest", "Agile/Scrum", "Code Reviews", "CI/CD Pipelines", "Software Architecture"],
-              },
-            ]}
-          />
+  heading="Core Skills"
+  entries={[
+    {
+      title: "iOS:",
+      items: [
+        "Swift", 
+        "SwiftUI", 
+        "Objective-C", 
+        "UIKit", 
+        "Combine", 
+        "CocoaPods", 
+        "RealmSwift", 
+        "Firebase", 
+        "WebRTC", 
+        "XMPP", 
+        "MessageKit"
+      ],
+    },
+    {
+      title: "Android:",
+      items: [
+        "Kotlin", 
+        "Java", 
+        "Jetpack Compose", 
+        "Android SDK", 
+        "Gradle", 
+        "Room", 
+        "Retrofit", 
+        "Coroutines", 
+        "Firebase", 
+        "Glide"
+      ],
+    },
+    {
+      title: "Web Development:",
+      items: [
+        "HTML5", 
+        "CSS3", 
+        "JavaScript", 
+        "React.js", 
+        "Redux", 
+        "Tailwind CSS", 
+        "Axios", 
+      ],
+    },
+    {
+      title: "Server-Side:",
+      items: [
+        "Node.js", 
+        "Express.js", 
+        "MongoDB", 
+        "REST APIs", 
+        "Socket.io", 
+        "JWT Authentication", 
+        "bcrypt", 
+      ],
+    },
+    {
+      title: "Tools & Platforms:",
+      items: [
+        "Xcode", 
+        "Android Studio", 
+        "Visual Studio Code", 
+        "Git/GitHub/GitLab", 
+        "Postman", 
+        "Docker", 
+        "Azure DevOps", 
+        "Jira", 
+        "Trello", 
+        "Firebase Console"
+      ],
+    }
+  ]}
+/>
+
           <AboutItems
             heading="Education"
             entries={[

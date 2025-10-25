@@ -1,89 +1,141 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const ProjectCardStyles = styled.div`
-  .card {
-    margin: 20px;
-    width: 350px;
-    height: 250px;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 1px;
-    background-color: #fff;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-  }
+const ProjectsSection = styled.section`
+  background-color: #f9fafb;
+  padding: 80px 0;
 
-  .card-image {
-    position: relative;
-    height: 250px;
-  }
-
-  .card-image img {
+  .container {
     width: 100%;
-    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .section-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  .project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
   }
 
-  .card-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+  .project-content {
     padding: 20px;
-    transition: all 0.5s ease-in-out;
-    transform: translateY(100%);
   }
 
-  .card:hover .card-details {
-    transform: translateY(0);
+  .project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #111;
   }
 
-  .card-details h3 {
-    margin: 0 0 10px 0;
-    font-size: 20px;
+  .project-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
   }
 
-  .card-details p {
-    margin: 0 0 20px 0;
-    font-size: 14px;
-    line-height: 1.5;
+  .project-links {
+    display: flex;
+    gap: 15px;
   }
 
-  @media only screen and (max-width: 768px) {
-    .card {
-      width: 100%;
+  .project-links a {
+    color: #333;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .project-links a:hover {
+    color: #000;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 1.8rem;
     }
   }
 `;
-export default function ProjectCard({ project }) {
+
+export default function Projects({ projects }) {
   return (
-    <ProjectCardStyles>
-      <div className="card">
-        <div className="card-image">
-          <img
-            src={project.img}
-            loading="lazy"
-            alt={"project " + project.name}
-          />
-          <div className="card-details">
-            <div className="flex gap-6">
-              <h3>{project.name}</h3>
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="bg-black h-12 w-fit p-2 rounded-full hover:scale-150 transition ease-in-out delay-150 cursor-pointer" />
-              </a>
+    <ProjectsSection>
+      <div className="container">
+        <div className="section-header">
+          <h2>My Projects</h2>
+          <p>Some of the web and mobile applications I’ve built and contributed to.</p>
+        </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <div className="project-image">
+                <img src={project.img} alt={project.name} loading="lazy" />
+              </div>
+              <div className="project-content">
+                <h3>{project.name}</h3>
+                <p>{project.desc}</p>
+                <div className="project-links">
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-            <p>{project.desc}</p>
-          </div>
+          ))}
         </div>
       </div>
-    </ProjectCardStyles>
+    </ProjectsSection>
   );
 }

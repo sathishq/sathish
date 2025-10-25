@@ -10,44 +10,67 @@ const AboutItemsStyles = styled.div`
     margin-bottom: 3rem;
     text-transform: uppercase;
   }
+
   .entries {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
     margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: nowrap;
+
     .title {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
+      font-weight: 600;
+      min-width: 260px; /* Keeps title column aligned */
+      text-align: right; /* visually aligns titles */
+      padding-top: 0.5rem; /* aligns baseline with first row of items */
     }
+
     .items {
       display: flex;
-      gap: 1.5rem;
-      margin-left: 3rem;
+      flex-wrap: wrap; /* ✅ items will wrap under themselves, not under title */
+      gap: 1rem;
+      flex: 1;
+
       .item {
         background-color: var(--deep-dark);
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1.2rem;
         border-radius: 8px;
+        border: 1px solid var(--gray-2);
+        white-space: nowrap;
+        transition: all 0.2s ease;
 
         p {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
+          color: var(--gray-1);
+        }
+
+        &:hover {
+          background-color: var(--gray-2);
+          transform: translateY(-2px);
         }
       }
     }
   }
+
   @media only screen and (max-width: 768px) {
     .heading {
       font-size: 3rem;
     }
+
     .entries {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
-      .items {
-        position: initial;
-        gap: 1rem;
-        margin-left: 0;
-      }
+
       .title {
-        font-size: 2rem;
+        text-align: left;
+        min-width: unset;
+      }
+
+      .items {
+        margin-left: 0;
+        gap: 1rem;
       }
     }
   }
