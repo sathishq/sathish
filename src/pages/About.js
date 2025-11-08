@@ -157,7 +157,6 @@ export default function About() {
         "REST APIs", 
         "Socket.io", 
         "JWT Authentication", 
-        "bcrypt", 
       ],
     },
     {
@@ -168,7 +167,6 @@ export default function About() {
         "Visual Studio Code", 
         "Git/GitHub/GitLab", 
         "Postman", 
-        "Docker", 
         "Azure DevOps", 
         "Jira", 
         "Trello", 
@@ -186,7 +184,7 @@ export default function About() {
                 items: [
                   "PR Engineering College – Anna University",
                   "Postgraduate",
-                  "CGPA: 7.6",
+                  "CGPA: 7.6/10",
                 ],
               },
             ]}

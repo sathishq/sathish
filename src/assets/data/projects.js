@@ -1,104 +1,79 @@
 import { v4 as uuidv4 } from 'uuid';
-import PredixImg from '../images/predix.jpg'
-import CAPImg from '../images/cap.JPG'
-import ImgDetectionImg from '../images/image_detection.jpg'
-import EmailBotImg from '../images/email_bot.png'
-import MedCareImg from '../images/medcare.JPG'
-import JobScraperImg from '../images/job_scraper.JPG'
-import PortfolioImg from '../images/portfolio.JPG'
-import RFDTImg from '../images/rfdt.png'
-import TodoImg from '../images/todo_app.JPG'
+
+
+// iOS App Logos
+import Connect4UImg from '../images/c4u.png';
+import Connect4UAndroid from '../images/c4u_android.png';
+import Connect4UWeb from '../images/c4u_web.png';
+import JuglImg from '../images/jugl.png';
+import ScimboImg from '../images/scimbo.png';
+import TruztproImg from '../images/trustpro.png';
 
 const projectList = [
   {
     id: uuidv4(),
-    name: 'PredixDB',
-    desc:
-      'Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual. Online platform that assists users to keep track media watched, currently watching, or planning to watch next. It even delivers personalized recommendations for each individual.',
-    img: PredixImg,
-    tech: ['django', 'html css', 'javascript', 'ai ml', 'python'],
-    liveLink: 'https://predixdb.herokuapp.com/',
-    githubLink: 'https://github.com/skshamagarwal/Predix'
+    name: 'Connect4U',
+    category: 'iOS',
+    desc: 'A SwiftUI communication app using Azure Communication Services for real-time voice, video calls, and group chat with spam detection.',
+    img: Connect4UImg,
+    tech: ['SwiftUI', 'Azure Communication', 'Azure Functions', 'XMPP'],
+    liveLink: 'https://apps.apple.com/us/app/connect-4u/id6464481755',
+  },
+  {
+    id: uuidv4(),
+    name: 'Jugl',
+    category: 'iOS',
+    desc: 'Enterprise-grade chat app with broadcast messaging and moderation tools built using Swift and XMPP.',
+    img: JuglImg,
+    tech: ['Swift', 'RealmSwift', 'CocoaPods', 'XMPP'],
+    liveLink: 'https://apps.apple.com/in/app/joiint/id1571640105',
+  },
+  {
+    id: uuidv4(),
+    name: 'Scimbo',
+    category: 'iOS',
+    desc: 'Real-time messaging and calling app using WebRTC and Socket.io, supporting audio/video calls, media sharing, and location sharing.',
+    img: ScimboImg,
+    tech: ['Swift', 'CoreData', 'CryptoJS', 'WebRTC', 'Socket.io'],
+    liveLink: 'https://apps.apple.com/us/app/scimbo/id1241913262',
+  },
+  {
+    id: uuidv4(),
+    name: 'TruztPro',
+    category: 'iOS',
+    desc: 'On-demand handyman service app that connects users with professionals for maintenance and cleaning services.',
+    img: TruztproImg,
+    tech: ['Swift', 'Socket.io', 'REST API', 'Google Maps'],
+    liveLink: 'https://apps.apple.com/us/app/truztpro/id1354294771',
+  },
+
+  {
+    id: uuidv4(),
+    name: 'Connect4U',
+    category: 'Android',
+    desc: 'This app accompanies Connect4U systems and enables you to receive calls from C4U intercom systems to your mobile phone.',
+    img: Connect4UAndroid,
+    tech: ['Java', 'retrofit','Coroutines', 'Firebase', 'Glide'],
+    githubLink: 'https://play.google.com/store/apps/details?id=com.connect4you.connect4umobile&pcampaignid=web_share',
+  },
+
+  {
+    id: uuidv4(),
+    name: 'Connect4U',
+    category: 'Web',
+    desc: 'Connect4U is an Israeli company offering a next-generation IP intercom system for residential buildings. Their smart solution lets residents manage building entry, view visitors, and open doors remotely via a smartphone app. The system emphasizes security, ease of use, and local development, with no ongoing fees after installation. It supports Shabbat-friendly operation, works even during internet outages, and includes remote service and user management tools for building committees.',
+    img: Connect4UWeb,
+    tech: [ 'HTML/CSS', 'JavaScript'],
+    liveLink: 'https://connect4u.co.il/',
   },
   {
     id: uuidv4(),
     name: 'Jobs Scraper',
-    desc:
-      'Meta Search for Jobs, Vacancies and Internships and showing it all at a single platform. Developed while working with Frsh Tech Pvt Ltd',
-    img: JobScraperImg,
-    tech: ['javascript', 'nodejs'],
+    category: 'Web',
+    desc: 'A meta job search aggregator that fetches and lists job openings from multiple sources on one platform.',
+    img: Connect4UWeb,
+    tech: ['JavaScript', 'Node.js'],
     liveLink: 'https://frshr.in/jobs~result.html?LatestJobs-Result',
-    githubLink: ''
-  },
-  {
-    id: uuidv4(),
-    name: 'Web Portfolio',
-    desc:
-      'My Personal Portfolio, showing all necessary details for an Computer Science Student seeking for career opportunities and extend reach. ',
-    img: PortfolioImg,
-    tech: ['html css', 'javascript', 'react', 'nodejs'],
-    liveLink: 'https://skshamagarwal.github.io/portfolio/',
-    githubLink: 'https://github.com/skshamagarwal/portfolio'
-  },
-  {
-    id: uuidv4(),
-    name: 'ML from Scratch',
-    desc:
-      'Implementation of Machine Learning Models - Decision Tree and Random Forest right from Scratch in Python without using any ML frameworks.',
-    img: RFDTImg,
-    tech: ['ai ml', 'python'],
-    liveLink: 'https://github.com/skshamagarwal/ML_From_Scratch/blob/master/DecisionTree.ipynb',
-    githubLink: 'https://github.com/skshamagarwal/ML_From_Scratch'
-  },
-  {
-    id: uuidv4(),
-    name: 'MEDCARE',
-    desc:
-      'Mobile Application for Consulting Doctors, keeping track of Health Checkups and even mark important Dates & Appointments... All in one Applcation for user\'s daily Health Care Routine.',
-    img: MedCareImg,
-    tech: ['flutter', 'dart'],
-    liveLink: '',
-    githubLink: 'https://github.com/skshamagarwal/MedCare'
-  },
-  {
-    id: uuidv4(),
-    name: 'HealthCare CAP',
-    desc:
-      'Cardiovascular Ailment Prediction - an awesome Heart Attack Prediction application using Machine Learning Techniques!',
-    img: CAPImg,
-    tech: ['django', 'html css', 'javascript', 'ai ml', 'python'],
-    liveLink: 'https://mycap.herokuapp.com/',
-    githubLink: 'https://github.com/skshamagarwal/CAP'
-  },
-  {
-    id: uuidv4(),
-    name: 'Image Detection',
-    desc:
-      'Machine Learning Model that detect objects in an image using VGG Transfer Learning. It uses CNN Technique to identify and train upon the dataset.',
-    img: ImgDetectionImg,
-    tech: ['ai ml', 'python'],
-    liveLink: 'https://github.com/skshamagarwal/Reverse-Image-CNN/blob/main/VGG16%20Model%20Training.ipynb',
-    githubLink: 'https://github.com/skshamagarwal/Reverse-Image-CNN'
-  },
-  {
-    id: uuidv4(),
-    name: 'Email BOT',
-    desc:
-      'Python Script that automates the process of sending emails manually. The bot accepts your voice commands and sends or copies email to clipboard on the user\'s behalf.',
-    img: EmailBotImg,
-    tech: ['python'],
-    liveLink: '',
-    githubLink: 'https://github.com/skshamagarwal/EmailBot'
-  },
-  {
-    id: uuidv4(),
-    name: 'TODO App',
-    desc:
-      'My TODO application to manage all life crises. Add Tasks you have to accomplish, mark pending or finshed even delete if needed. Simple Solution to stay productive.',
-    img: TodoImg,
-    tech: ['react', 'nodejs'],
-    liveLink: '',
-    githubLink: 'https://github.com/skshamagarwal/Todo-App'
   }
 ];
 

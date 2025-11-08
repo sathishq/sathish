@@ -10,7 +10,7 @@ const NavBarStyles = styled.div`
   left: 0;
   width: 100%;
   background: var(--dark-bg);
-  
+
   .navIcon {
     display: none;
     outline: none;
@@ -46,47 +46,53 @@ const NavBarStyles = styled.div`
         font-family: "LilitaOne Regular";
       }
     }
-    .menu {
-      ul {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
 
-        li {
+    .menu ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        border-radius: 8px;
+        transition: 0.5s ease background-color;
+
+        &:hover {
+          background-color: var(--deep-dark);
+        }
+
+        a {
           display: inline-block;
+          font-family: "RobotoMono Regular";
+          margin: 0 0.5em;
+          padding: 1rem 1rem;
+          font-size: 1.8rem;
+          letter-spacing: 2px;
+          color: var(--gray-1);
+          outline: none;
+          transition: color 0.3s ease, background 0.3s ease;
           border-radius: 8px;
-          transition: 0.5s ease background-color;
+        }
 
-          &:hover {
-            background-color: var(--deep-dark);
-          }
-
-          a {
-            display: inline-block;
-            font-family: "RobotoMono Regular";
-            margin: 0 0.5em;
-            padding: 1rem 1rem;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            color: var(--gray-1);
-            outline: none;
-          }
-
-          .active {
-            color: var(--white);
-          }
+        a.active {
+          color: var(--white);
+          background-color: var(--deep-dark);
         }
       }
     }
   }
+
   @media only screen and (max-width: 768px) {
     padding: 0;
+
     .navIcon {
       display: block;
     }
+
     .hide-item {
       transform: translateY(calc(-100% - var(--top)));
     }
+
     .wrapper {
       position: absolute;
       background-color: var(--deep-dark);
@@ -98,25 +104,27 @@ const NavBarStyles = styled.div`
       transition: 0.3s ease transform;
       top: var(--top);
 
-      .logo {
-        p {
+      .logo p {
+        font-size: 3rem;
+      }
+
+      .menu ul li {
+        display: block;
+        margin-bottom: 2rem;
+
+        a {
           font-size: 3rem;
         }
-      }
-      .menu {
-        ul {
-          li {
-            display: block;
-            margin-bottom: 2rem;
-            a {
-              font-size: 3rem;
-            }
-          }
+
+        a.active {
+          background-color: var(--dark-bg);
+          color: var(--white);
         }
       }
     }
   }
 `;
+
 
 export default function NavBar() {
   const [showNav, setShowNav] = useState(false);
